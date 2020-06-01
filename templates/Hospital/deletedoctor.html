@@ -1,0 +1,10 @@
+{% extends 'Hospital/base2.html' %}
+
+{% block body %}
+<h6 class="mt-4">Are you sure to Delete>> "{{doctor}}"</h6>
+<form class="mt-4" action="" method="POST">
+    {% csrf_token %}
+    <a href="/hr">Cancel</a>
+    <input class="btn btn-danger" type="submit" name="confirm" value="Confirm">
+</form>
+{% endblock body %}

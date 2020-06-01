@@ -1,0 +1,26 @@
+{% extends 'Hospital/base.html' %}
+
+{% block body %}
+<h1>Appointment Here</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Patient Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in appointment %}
+        <tr>
+            <td>{{item.date}}</td>
+            <td>{{item.time}}</td>
+            <td>{{item.patient}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock body %}

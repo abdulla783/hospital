@@ -1,0 +1,18 @@
+{% extends 'Hospital/base.html' %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <a class="btn btn-outline-primary" href="/doctor/create">Create Prescription</a>
+    {% for item in prescription %}
+    <div class="card mt-4" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{item.date}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Symptoms: {{item.desease}}</h6>
+            <p class="card-text">Prescription: {{item.priscription}}</p>
+            <p class="card-text">Patient: {{item.patient}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}
